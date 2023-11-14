@@ -7,6 +7,8 @@ import { FooterComponent } from './footer/footer.component';
 import {RouterModule, Routes} from "@angular/router";
 import {ListarCursosComponent} from "./cursos/listar-cursos/listar-cursos.component";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import * as sweetalert2 from "sweetalert2";
+import {SweetAlert2Module} from "@sweetalert2/ngx-sweetalert2";
 
 const rutas: Routes =[
   //{path: '', redirectTo: 'listar-cursos', pathMatch: 'full'},
@@ -22,6 +24,7 @@ const rutas: Routes =[
     FooterComponent
   ],
   imports: [
+    SweetAlert2Module.forRoot(),
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(rutas)
